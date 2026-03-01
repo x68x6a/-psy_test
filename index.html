@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>정서 체크리스트</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <h1>정서 체크리스트</h1>
+      <p>각 항목을 체크하면 브라우저(현재 PC)에 자동 저장됩니다.</p>
+      <button id="resetAll" class="danger">모든 체크 해제</button>
+    </header>
+
+    <nav class="tabs" id="tabs"></nav>
+    <main id="tabContent" class="tab-content"></main>
+
+    <footer>
+      <small>저장 방식: localStorage (같은 브라우저/기기에서 유지)</small>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

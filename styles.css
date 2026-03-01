@@ -1,0 +1,102 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f4f6f8;
+  --card: #ffffff;
+  --text: #1b1f24;
+  --muted: #5c6670;
+  --accent: #2962ff;
+  --danger: #c62828;
+  --border: #d9dee3;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1115;
+    --card: #171b22;
+    --text: #e7eaf0;
+    --muted: #a6afbb;
+    --accent: #7aa2ff;
+    --danger: #ff6b6b;
+    --border: #2b323d;
+  }
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans KR', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.page-header, .tab-content, footer {
+  width: min(1000px, 92vw);
+  margin: 0 auto;
+}
+
+.page-header { padding: 24px 0 8px; }
+.page-header h1 { margin: 0 0 8px; }
+.page-header p { margin: 0 0 12px; color: var(--muted); }
+
+.tabs {
+  width: min(1000px, 92vw);
+  margin: 8px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tabs button {
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.tabs button.active {
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.tab-content {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 24px;
+}
+
+section + section {
+  margin-top: 22px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--border);
+}
+
+h2, h3 { margin: 0 0 10px; }
+ul { margin: 0; padding-left: 0; list-style: none; }
+li { margin: 8px 0; }
+label { display: flex; align-items: flex-start; gap: 10px; cursor: pointer; }
+input[type='checkbox'] { margin-top: 4px; transform: scale(1.1); }
+
+.danger {
+  border: 1px solid var(--danger);
+  color: var(--danger);
+  background: transparent;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.text-block {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px;
+  color: var(--muted);
+  white-space: pre-line;
+}
+
+footer { color: var(--muted); padding-bottom: 24px; }
